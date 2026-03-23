@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Padaria Thais Caroline",
+    "vendas": [
+      { "dia": "23/03", "qtd": 10 }
+    ]
+  },
+  {
+    "nome": "pizzaria bom sabor",
+    "vendas": [
+      { "dia": "23/03", "qtd": 10 }
+    ]
+  },
+  {
+    "nome": "barbearia do Heberson",
+    "vendas": [
+      { "dia": "23/03", "qtd": 10 }
+    ]
+  },
+  {
+    "nome": "barbearia Zeus pague menos",
+    "vendas": [
+      { "dia": "23/03", "qtd": 10 }
+    ]
+  },
+  {
+    "nome": "Hamburgueria X",
+    "vendas": [
+      { "dia": "23/03", "qtd": 10 }
+    ]
+  }
+]
