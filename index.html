@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard Pipoca Gourmet</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { font-family: Arial; background:#0f172a; color:#fff; padding:20px; }
     .container { max-width:1100px; margin:auto; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px; }
-    .card { background:#1e293b; padding:20px; border-radius:12px; }
-    .total { background:#22c55e; color:#000; font-weight:bold; text-align:center; }
+    .card { 
+      background:#1e293b; 
+      padding:20px; 
+      border-radius:12px; 
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      background:#334155;
+    }
+    .total { background:#22c55e; color:#000; font-weight:bold; text-align:center; margin-bottom:20px; }
   </style>
 </head>
 <body>
@@ -17,7 +26,6 @@
   <h1>🍿 Dashboard Pipoca Gourmet</h1>
   <div id="resumo" class="card total"></div>
   <div id="lista" class="grid"></div>
-  <canvas id="grafico"></canvas>
 </div>
 
 <script>
@@ -31,8 +39,6 @@ async function carregarDados() {
 
 function calcular(dados) {
   let totalGeral = 0;
-  let labels = [];
-  let valores = [];
 
   const lista = document.getElementById('lista');
   lista.innerHTML = '';
@@ -42,34 +48,25 @@ function calcular(dados) {
     const lucro = totalUnidades * lucroPorUnidade;
     totalGeral += lucro;
 
-    labels.push(local.nome);
-    valores.push(totalUnidades);
-
     const div = document.createElement('div');
     div.className='card';
+
+    div.onclick = () => {
+      window.open(local.link, '_blank');
+    };
+
     div.innerHTML = `
       <h2>${local.nome}</h2>
       <p>Unidades: ${totalUnidades}</p>
       <p>Lucro: R$ ${lucro.toFixed(2)}</p>
       <p>Dias: ${local.vendas.map(v=>v.dia+' ('+v.qtd+')').join(', ')}</p>
+      <p style="opacity:0.6; font-size:12px;">Clique para abrir localização</p>
     `;
 
     lista.appendChild(div);
   });
 
   document.getElementById('resumo').innerHTML = `💰 Lucro total: R$ ${totalGeral.toFixed(2)}`;
-
-  gerarGrafico(labels,valores);
-}
-
-function gerarGrafico(labels,valores){
-  const ctx = document.getElementById('grafico');
-  if(window.chart) window.chart.destroy();
-
-  window.chart = new Chart(ctx,{
-    type:'bar',
-    data:{ labels:labels, datasets:[{ label:'Unidades', data:valores }] }
-  });
 }
 
 carregarDados();
