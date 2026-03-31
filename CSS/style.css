@@ -105,9 +105,23 @@
     .btn-map {
       background: linear-gradient(90deg, #38bdf8, #f472b6);
       color: #000;
+      min-height: 5vh;
+      font-size: 34px ;
     }
 
     .btn-back {
       background: #ef4444;
       color: #fff;
+      min-height: 5vh;
+      font-size: 34px ;
+    }
+
+    h3 {
+      
+      min-height: 5vh;
+      font-size: 34px ;
+    }
+    li{
+        min-height: 5vh;
+      font-size: 34px ;
     }
