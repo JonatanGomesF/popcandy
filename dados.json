@@ -3,7 +3,7 @@
     "nome": "Casa De Carnes Leão",
     "link": "https://maps.app.goo.gl/KHSsRsibk2ZefbXo8",
     "vendas": [
-      { "dia": "24/03", "qtd": 10 }
+      { "dia": "24/03 (está pago)", "qtd": 10 }
     ]
   },
   {
@@ -11,49 +11,66 @@
     "link": "https://maps.app.goo.gl/ZtFT1F97QhZxgTwN7",
     "vendas": [
       { "dia": "18/03 (está pago)", "qtd": 10 },
-      { "dia": "30/03 (pendente de pagamento)", "qtd": 7 }
+      { "dia": "30/03 (está pago)", "qtd": 7 }
     ]
   },
   {
     "nome": "Smash House Itu Hamburgueria",
     "link": "https://maps.app.goo.gl/58JC8X45iw9ECJVk7",
     "vendas": [
-      { "dia": "24/03", "qtd": 10 }
+      { "dia": "24/03 (pendente de pagamento 85,00)", "qtd": 10 }
     ]
   },
   {
     "nome": "Panificadora Thais Caroline",
     "link": "https://maps.app.goo.gl/znRyfGsRfcXCg8i1A",
     "vendas": [
-      { "dia": "20/03", "qtd": 10 }
+      { "dia": "20/03 (pago)", "qtd": 10 }
     ]
   },
   {
     "nome": "Padaria São Cristovão",
     "link": "https://maps.app.goo.gl/PaAzNbJBCQdboKxb8",
     "vendas": [
-      { "dia": "23/03", "qtd": 10 }
+      { "dia": "23/03 (está pago)", "qtd": 10 },
+      { "dia": "30/03 (pendente de pagamento 59,50)", "qtd": 7 }
     ]
   },
   {
     "nome": "Marmitaria Peg Pag",
     "link": "https://maps.app.goo.gl/und7xEbJ9i1PHfkc8",
     "vendas": [
-      { "dia": "18/03", "qtd": 10 }
+      { "dia": "18/03 (pendente de pagamento 85,00)", "qtd": 10 }
     ]
   },
   {
     "nome": "quatro marias",
     "link": "https://maps.app.goo.gl/SvcS7pQby1AvPW839",
     "vendas": [
-      { "dia": "21/03", "qtd": 10 }
+      { "dia": "21/03 (está pago)", "qtd": 10 },
+      { "dia": "27/03 (pendente de pagamento 34,00)", "qtd": 4 }
     ]
   },
   {
     "nome": "Barbearia do Heberson",
     "link": "https://maps.app.goo.gl/tufatJ5ZC5CnFBGC8",
     "vendas": [
-      { "dia": "24/03", "qtd": 10 }
+      { "dia": "24/03(pendente de pagamento 85,00)", "qtd": 10 }
+    ]
+  },
+  {
+    "nome": "Floricultura",
+    "link": "https://maps.app.goo.gl/vkVnGZoKXRWyKVyZ7",
+    "vendas": [
+      { "dia": "01/03 (está pago)", "qtd": 10 },
+      { "dia": "30/03 (pendente de pagamento 58,50 (descontado 1 real)", "qtd": 7 }
+    ]
+  },
+  {
+    "nome": "Sua coxinha (pague menos)",
+    "link": "",
+    "vendas": [
+      { "dia": "30/03 (pendente de pagamento 34,00)", "qtd": 4 }
     ]
   }
 ]
