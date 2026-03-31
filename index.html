@@ -3,73 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard Pipoca Gourmet</title>
-  <style>
-    body { font-family: Arial; background:#0f172a; color:#fff; padding:20px; }
-    .container { max-width:1100px; margin:auto; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px; }
-    .card { 
-      background:#1e293b; 
-      padding:20px; 
-      border-radius:12px; 
-      cursor:pointer;
-      transition:0.3s;
-    }
-    .card:hover {
-      transform: scale(1.03);
-      background:#334155;
-    }
-    .total { background:#22c55e; color:#000; font-weight:bold; text-align:center; margin-bottom:20px; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="JS/index.js" defer></script>
 </head>
 <body>
 <div class="container">
-  <h1>🍿 Dashboard Pipoca Gourmet</h1>
-  <div id="resumo" class="card total"></div>
+  <h1>🍿 PopCandy Dashboard</h1>
+  <div id="resumo" class="total"></div>
   <div id="lista" class="grid"></div>
+  <div id="detalhe"></div>
 </div>
 
-<script>
-const lucroPorUnidade = 5;
 
-async function carregarDados() {
-  const res = await fetch('dados.json');
-  const dados = await res.json();
-  calcular(dados);
-}
-
-function calcular(dados) {
-  let totalGeral = 0;
-
-  const lista = document.getElementById('lista');
-  lista.innerHTML = '';
-
-  dados.forEach(local => {
-    const totalUnidades = local.vendas.reduce((a,b)=>a+b.qtd,0);
-    const lucro = totalUnidades * lucroPorUnidade;
-    totalGeral += lucro;
-
-    const div = document.createElement('div');
-    div.className='card';
-
-    div.onclick = () => {
-      window.open(local.link, '_blank');
-    };
-
-    div.innerHTML = `
-      <h2>${local.nome}</h2>
-      <p>Unidades: ${totalUnidades}</p>
-      <p>Lucro: R$ ${lucro.toFixed(2)}</p>
-      <p>Dias: ${local.vendas.map(v=>v.dia+' ('+v.qtd+')').join(', ')}</p>
-      <p style="opacity:0.6; font-size:12px;">Clique para abrir localização</p>
-    `;
-
-    lista.appendChild(div);
-  });
-
-  document.getElementById('resumo').innerHTML = `💰 Lucro total: R$ ${totalGeral.toFixed(2)}`;
-}
-
-carregarDados();
-</script>
 </body>
 </html>

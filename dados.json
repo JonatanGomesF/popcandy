@@ -10,7 +10,8 @@
     "nome": "Pizzaria Bom Sabor",
     "link": "https://maps.app.goo.gl/ZtFT1F97QhZxgTwN7",
     "vendas": [
-      { "dia": "18/03", "qtd": 10 }
+      { "dia": "18/03 (está pago)", "qtd": 10 },
+      { "dia": "30/03 (pendente de pagamento)", "qtd": 7 }
     ]
   },
   {
